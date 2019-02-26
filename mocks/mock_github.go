@@ -85,13 +85,13 @@ func (mr *MockGithubMockRecorder) PostComment(arg0, arg1 interface{}) *gomock.Ca
 }
 
 // UpdateCommitStatus mocks base method
-func (m *MockGithub) UpdateCommitStatus(arg0, arg1, arg2 string) error {
-	ret := m.ctrl.Call(m, "UpdateCommitStatus", arg0, arg1, arg2)
+func (m *MockGithub) UpdateCommitStatus(arg0, arg1, arg2 string, arg3 string) error {
+	ret := m.ctrl.Call(m, "UpdateCommitStatus", arg0, arg1, arg2, arg3)
 	ret0, _ := ret[0].(error)
 	return ret0
 }
 
 // UpdateCommitStatus indicates an expected call of UpdateCommitStatus
-func (mr *MockGithubMockRecorder) UpdateCommitStatus(arg0, arg1, arg2 interface{}) *gomock.Call {
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCommitStatus", reflect.TypeOf((*MockGithub)(nil).UpdateCommitStatus), arg0, arg1, arg2)
+func (mr *MockGithubMockRecorder) UpdateCommitStatus(arg0, arg1, arg2 interface{}, arg3 interface{}) *gomock.Call {
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCommitStatus", reflect.TypeOf((*MockGithub)(nil).UpdateCommitStatus), arg0, arg1, arg2, arg3)
 }

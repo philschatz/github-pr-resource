@@ -100,6 +100,7 @@ empty commit to the PR*.
 | `path`         | Yes      | `pull-request`          | The name given to the resource in a GET step.                                                       |
 | `status`       | No       | `SUCCESS`               | Set a status on a commit. One of `SUCCESS`, `PENDING`, `FAILURE` and `ERROR`.                       |
 | `context`      | No       | `unit-test`             | A context to use for the status. (Prefixed with `concourse-ci`, defaults to `concourse-ci/status`). |
+| `url`          | No       | `https://golang.org`    | Set a custom URL on a commit. (defaults to the build URL)                                           |
 | `comment`      | No       | `hello world!`          | A comment to add to the pull request.                                                               |
 | `comment_file` | No       | `my-output/comment.txt` | Path to file containing a comment to add to the pull request (e.g. output of `terraform plan`).     |
 

@@ -117,7 +117,7 @@ func TestPut(t *testing.T) {
 
 			// Set expectations
 			if tc.parameters.Status != "" {
-				github.EXPECT().UpdateCommitStatus(tc.version.Commit, tc.parameters.Context, tc.parameters.Status).Times(1).Return(nil)
+				github.EXPECT().UpdateCommitStatus(tc.version.Commit, tc.parameters.Context, tc.parameters.Status, "").Times(1).Return(nil)
 			}
 			if tc.parameters.Comment != "" {
 				github.EXPECT().PostComment(tc.version.PR, tc.parameters.Comment).Times(1).Return(nil)
